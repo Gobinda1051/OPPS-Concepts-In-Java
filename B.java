@@ -1,30 +1,27 @@
- class B {
-    void add()
-    {
-        int a=10,b=20,c;
-        c=a+b;
-        System.out.println(c);
-    }
-    void add( int x,int y)
+class A
+{
+    int a;
+    String b;
+
+    A()
     {
 
-        int c;
-        c=x+y;
-        System.out.println(c);
-        
+        a=33;
+        b="Gobinda";
+        System.out.println(a+" "+b);
     }
-    void add(  double y ,int x)
+    A( A ref)
     {
-        double c;
-        c=x+y;
-        System.out.println(c);
+a=ref.a;
+b=ref.b;
+System.out.println(a+" "+b);
     }
-
-public static void main(String[] args) {
-    B r=new B();
-    r.add();
-    r.add( 12 ,20);
-    r.add(15.1,200);
 }
+ class B {
+    public static void main(String[] args) {
+        A r=new A();
+        A r2=new A(r); 
+    }
+
     
 }
